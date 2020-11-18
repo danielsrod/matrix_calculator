@@ -12,11 +12,21 @@ int main () {
     switch (escolha)
     {
     case 2:
-        
+        for (l = 0; l < 2; l++) {
+            for (c = 0; c < 2; c++) {
+                printf("Digite o elemento A%d%d", l, c);
+                scanf("%d", &A[l][c]);
+            }
+        }
         break;
     
     case 3:
-
+        for (l = 0; l < 3; l++) {
+            for (c = 0; c < 3; c++) {
+                printf("Digite o elemento B%d%d". l, c);
+                scanf("%d", &B[l][c])
+            }
+        }
         break;
 
     default:
