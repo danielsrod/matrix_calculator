@@ -17,14 +17,32 @@ int main () {
                 printf("Digite o elemento A%d%d\n", l + 1, c + 1);
                 scanf("%d", &A[l][c]);
                 }
+        printf("\n");
             }
+        for (l = 0; l < 2; l++) {
+            for (c = 0; c < 2; c++) {
+                printf("%d ", A[l][c]);
+                if (c == 1) {
+                    printf("\n");
+                }
+            }
+        }
         break;
     
     case 3:
         for (l = 0; l < 3; l++) {
             for (c = 0; c < 3; c++) {
-                printf("Digite o elemento B%d%d", l + 1, c + 1);
+                printf("Digite o elemento B%d%d\n", l + 1, c + 1);
                 scanf("%d", &B[l][c]);
+            }
+        printf("\n");
+        }
+        for (l = 0; l < 3; l++) {
+            for (c = 0; c < 3; c++) {
+                printf("%d ", B[l][c]);
+                if (c == 2) {
+                    printf("\n");
+                }
             }
         }
 
@@ -34,16 +52,7 @@ int main () {
         break;
     }
 
-    printf("Matrix\n");
-
-    for (l = 0; l < 2; l++) {
-        for (c = 0; c < 2; c++) {
-            printf("%d ", A[l][c]);
-            if (c == 1) {
-                printf("\n");
-            }
-        }
-    }
+    printf("\nMatrix\n");
 
     return 0;
 }
