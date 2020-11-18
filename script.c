@@ -3,10 +3,10 @@
 int main () {
     int l = 0, c = 0, escolha = 0;
     int A[2][2], B[3][3];
-    printf("Determinante de uma matriz");
 
-    printf("voce quer calcular o determinante de uma matriz 2x2 ou 3x3 ?");
-    printf("[2] - 2x2 [3] 3x3");
+    printf("\nDeterminante de uma matriz");
+    printf("\nvoce quer calcular o determinante de uma matriz 2x2 ou 3x3 ?");
+    printf("\n[2] - 2x2 [3] 3x3\n");
     scanf("%d", &escolha);
 
     switch (escolha)
@@ -14,29 +14,36 @@ int main () {
     case 2:
         for (l = 0; l < 2; l++) {
             for (c = 0; c < 2; c++) {
-                printf("Digite o elemento A%d%d", l, c);
+                printf("Digite o elemento A%d%d\n", l + 1, c + 1);
                 scanf("%d", &A[l][c]);
+                }
             }
-        }
         break;
     
     case 3:
         for (l = 0; l < 3; l++) {
             for (c = 0; c < 3; c++) {
-                printf("Digite o elemento B%d%d". l, c);
-                scanf("%d", &B[l][c])
+                printf("Digite o elemento B%d%d", l + 1, c + 1);
+                scanf("%d", &B[l][c]);
             }
         }
+
         break;
 
     default:
         break;
     }
 
-    printf("sequencia de scans: \n");
-    printf("a11, a12, a13, a21, a22, a23, a31, a32, a33");
+    printf("Matrix\n");
 
-    
+    for (l = 0; l < 2; l++) {
+        for (c = 0; c < 2; c++) {
+            printf("%d ", A[l][c]);
+            if (c == 1) {
+                printf("\n");
+            }
+        }
+    }
 
     return 0;
 }
