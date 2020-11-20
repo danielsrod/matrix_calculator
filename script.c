@@ -3,7 +3,7 @@
 int main () {
     int l = 0, c = 0, escolha = 0;
     int A[2][2], B[3][3];
-    int detA = 0, detB = 0;
+    int detA = 0, detB = 0, detBpos = 0, detBneg = 0;
 
     printf("\nDeterminante de uma matriz");
     printf("\nvoce quer calcular o determinante de uma matriz 2x2 ou 3x3 ?");
@@ -56,9 +56,16 @@ int main () {
             }
         }
 
+        detBpos = (B[0][0] * B[1][1] * B[2][2]) + (B[0][1] * B[1][2] * B[2][0]) + (B[0][2] * B[2][1] * B[1][0]);
+        detBneg = (B[0][2] * B[1][1] * B[2][0]) + (B[0][1] * B[1][0] * B[2][2]) + (B[0][0] * B[2][1] * B[1][2]);
+        detB = detBpos - detBneg;
+
+        printf("\nDeterminante 3x3 = %d\n\n", detB);
+
         break;
 
     default:
+        printf("WTF");
         break;
     }
 
