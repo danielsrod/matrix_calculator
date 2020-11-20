@@ -3,6 +3,7 @@
 int main () {
     int l = 0, c = 0, escolha = 0;
     int A[2][2], B[3][3];
+    int detA = 0, detB = 0;
 
     printf("\nDeterminante de uma matriz");
     printf("\nvoce quer calcular o determinante de uma matriz 2x2 ou 3x3 ?");
@@ -11,14 +12,16 @@ int main () {
 
     switch (escolha)
     {
-    case 2:
+    case 2: // Matriz 2x2
         for (l = 0; l < 2; l++) {
             for (c = 0; c < 2; c++) {
                 printf("Digite o elemento A%d%d\n", l + 1, c + 1);
                 scanf("%d", &A[l][c]);
                 }
-        printf("\n");
             }
+
+        printf("\n");
+
         for (l = 0; l < 2; l++) {
             for (c = 0; c < 2; c++) {
                 printf("%d ", A[l][c]);
@@ -27,16 +30,23 @@ int main () {
                 }
             }
         }
+
+
+        detA = (A[0][0] * A[1][1]) - (A[0][1] * A[1][0]) ;
+
+        printf("\nDeterminante 2x2 = %d\n", detA);
         break;
     
-    case 3:
+    case 3: // Matriz 3x3
         for (l = 0; l < 3; l++) {
             for (c = 0; c < 3; c++) {
                 printf("Digite o elemento B%d%d\n", l + 1, c + 1);
                 scanf("%d", &B[l][c]);
             }
-        printf("\n");
         }
+
+        printf("\n");
+
         for (l = 0; l < 3; l++) {
             for (c = 0; c < 3; c++) {
                 printf("%d ", B[l][c]);
@@ -51,8 +61,6 @@ int main () {
     default:
         break;
     }
-
-    printf("\nMatrix\n");
 
     return 0;
 }
